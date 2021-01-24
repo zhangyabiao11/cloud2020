@@ -1,2 +1,6 @@
 server:
   port: 8080
+
+  # 总结两个：
+  # 第一：子模块中<packaging>pom</packaging>注释掉
+  # 第二：引入mybatis必须在配置文件中配置，否则就不能引入
