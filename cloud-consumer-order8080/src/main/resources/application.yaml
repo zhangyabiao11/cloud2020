@@ -4,3 +4,14 @@ server:
   # 总结两个：
   # 第一：子模块中<packaging>pom</packaging>注释掉
   # 第二：引入mybatis必须在配置文件中配置，否则就不能引入
+spring:
+  application:
+    name: cloud-order-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/,http://eureka7001.com:7001/eureka/
+#  instance:
+#    prefer-ip-address: true
