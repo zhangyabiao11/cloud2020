@@ -65,4 +65,9 @@ public class PaymentController {
 
         return this.discoveryClient;
     }
+
+    @GetMapping("provide/info")
+    private String getPayment(){
+        return serverPort;
+    }
 }

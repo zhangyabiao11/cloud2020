@@ -44,5 +44,8 @@ public class PaymentController {
         }
         return new CommonResult<>(500,"插入失败",result);
     }
-
+    @GetMapping("provide/info")
+    private String getPayment(){
+        return serverPort;
+    }
 }
