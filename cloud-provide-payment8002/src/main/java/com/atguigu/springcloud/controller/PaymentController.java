@@ -45,7 +45,16 @@ public class PaymentController {
         return new CommonResult<>(500,"插入失败",result);
     }
     @GetMapping("provide/info")
-    private String getPayment(){
+    public String getPayment(){
+        return serverPort;
+    }
+    @GetMapping("provide/info/timeout")
+    public String getPaymentTimeOut(){
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return serverPort;
     }
 }

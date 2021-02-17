@@ -5,10 +5,16 @@ eureka:
     registerWithEureka: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
-    fetchRegistry: false
+    fetchRegistry: true
+#设置feign客户端超时时间(OpenFeign默认支持ribbon)
 ribbon:
-  eureka:
-    enabled: true
+  #指的是建立连接所用的时间，适用于网路环境正常的情况下，两端连接所用的时间
+  ReadTimeout: 5000
+  #指的是建立连接后，从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
 spring:
   application:
-    name: CLOUD-PAYMENT-SERVICE
+    name: ORDER
+logging:
+  level:
+    com.atguigu.springcloud.service.PaymentFeignService: debug
