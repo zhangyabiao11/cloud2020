@@ -67,7 +67,7 @@ public class PaymentController {
     }
 
     @GetMapping("provide/info")
-    private String getPayment(){
+    public String getPayment(){
         return serverPort;
     }
 
